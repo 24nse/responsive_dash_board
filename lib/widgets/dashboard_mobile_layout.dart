@@ -1,23 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/all_expensess.dart';
-import 'package:responsive_dash_board/widgets/custom_drawer.dart';
+import 'package:responsive_dash_board/widgets/all_expensess_and_quick_invoice_section.dart';
+import 'package:responsive_dash_board/widgets/income_section.dart';
+import 'package:responsive_dash_board/widgets/my_cards_and_transction_history_section.dart';
 
 class DashboardMobileLayout extends StatelessWidget {
   const DashboardMobileLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dashboard'),
-        backgroundColor: Colors.white,
-        foregroundColor: const Color(0xFF064061),
-      ),
-      drawer: const CustomDrawer(),
-      body: const Padding(
-        padding: EdgeInsets.all(16.0),
-        child: AllExpenses(),
-      ),
+    return const SingleChildScrollView(
+    child: 
+        Column(
+          children: [
+              AllExpensessAndQuickInvoiceSection(),
+                   SizedBox(
+            height: 24,
+          ),
+           MyCardsAndTransctionHistorySection(),
+          SizedBox(
+            height: 24,
+          ),
+          IncomeSection(),
+          ],
+        ),
+     
     );
   }
 } 

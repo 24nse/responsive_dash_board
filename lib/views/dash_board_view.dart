@@ -3,6 +3,7 @@ import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/adaptive_layout_widget.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/widgets/dashboard_desktop_layout.dart';
+import 'package:responsive_dash_board/widgets/dashboard_mobile_layout.dart';
 import 'package:responsive_dash_board/widgets/dashboard_tablet_layout.dart';
 
 class DashBoardView extends StatefulWidget {
@@ -35,7 +36,7 @@ class _DashBoardViewState extends State<DashBoardView> {
           ? const CustomDrawer()
           : null,
       body: AdaptiveLayout(
-        mobileLayout: (context) => SizedBox(),
+        mobileLayout: (context) => DashboardMobileLayout(),
         tabletLayout: (context) =>DashboardTabletLayout(),
         desktopLayout: (context) => DashboardDesktopLayout(),
       ),
