@@ -5,10 +5,7 @@ import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class InActiveDrawerItem extends StatelessWidget {
-  const InActiveDrawerItem({
-    super.key,
-    required this.drawerItemModel,
-  });
+  const InActiveDrawerItem({super.key, required this.drawerItemModel});
 
   final DrawerItemModel drawerItemModel;
 
@@ -29,10 +26,7 @@ class InActiveDrawerItem extends StatelessWidget {
 }
 
 class ActiveDrawerItem extends StatelessWidget {
-  const ActiveDrawerItem({
-    super.key,
-    required this.drawerItemModel,
-  });
+  const ActiveDrawerItem({super.key, required this.drawerItemModel});
 
   final DrawerItemModel drawerItemModel;
 
@@ -40,9 +34,13 @@ class ActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyles.styleBold16(context),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.styleBold16(context),
+        ),
       ),
       trailing: Container(
         width: 3.27,

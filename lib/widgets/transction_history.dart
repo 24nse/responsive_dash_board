@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/transction_history_list_view.dart';
@@ -7,26 +9,18 @@ class TrasnctionHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    log(MediaQuery.sizeOf(context).width.toString());
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TansctionHistoryHeader(),
-        SizedBox(
-          height: 20,
+        SizedBox(height: 20),
+        FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text('13 April 2022', style: AppStyles.styleMedium16(context)),
         ),
-        Text(
-          '13 April 2022',
-          style: TextStyle(
-            color: Color(0xFFAAAAAA),
-            fontSize: 16,
-            fontFamily: 'Montserrat',
-            fontWeight: FontWeight.w500,
-            height: 0,
-          ),
-        ),
-        SizedBox(
-          height: 16,
-        ),
+        SizedBox(height: 16),
         TransctionHistoryListView(),
       ],
     );
@@ -34,25 +28,31 @@ class TrasnctionHistory extends StatelessWidget {
 }
 
 class TansctionHistoryHeader extends StatelessWidget {
-  const TansctionHistoryHeader({
-    super.key,
-  });
+  const TansctionHistoryHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          'Transaction History',
-          style: AppStyles.styleSemiBold20(context),
-        ),
-        Text(
-          'See all',
-          style: AppStyles.styleMedium16(context).copyWith(
-            color: const Color(0xFF4EB7F2),
+        FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            'Transaction History',
+            style: AppStyles.styleSemiBold20(context),
           ),
-        )
+        ),
+        FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            'See all',
+            style: AppStyles.styleMedium16(
+              context,
+            ).copyWith(color: const Color(0xFF4EB7F2)),
+          ),
+        ),
       ],
     );
   }
