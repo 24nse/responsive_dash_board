@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/all_expensess.dart';
+import 'package:responsive_dash_board/widgets/all_expensess_and_quick_invoice_section.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
-import 'package:responsive_dash_board/widgets/quick_invoice.dart';
+import 'package:responsive_dash_board/widgets/my_cards_section.dart';
 
 
 class DashboardDesktopLayout extends StatelessWidget {
@@ -21,15 +21,28 @@ class DashboardDesktopLayout extends StatelessWidget {
               SliverFillRemaining(
                 hasScrollBody: false,
                 child: 
-                   Column(
-                  children: [
-                    AllExpenses(),
-                      SizedBox(
-                width: 24,
+                   Row(
+                     children: [
+                       Expanded(child: Padding(
+                         padding: EdgeInsets.only(top: 40),
+                         child: AllExpensessAndQuickInvoiceSection(),
+                       )),
+                             SizedBox(
+                      width: 24,
+                    ),
+                     Expanded(
+                        child: Column(
+                      children: [
+                        SizedBox(
+                          height: 40,
                         ),
-                      QuickInvoice(),
-                  ],
-                ),
+                        MyCardsSection(),
+                      
+                      ],
+                    )),
+                     ],
+                   ),
+                     
               
               ),
             ],
