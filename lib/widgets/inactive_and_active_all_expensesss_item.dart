@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/models/all_expensess_item_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/all_expensess_item_header.dart';
@@ -89,7 +88,7 @@ class ActiveAllExpensessItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensessItemHeader(
-            imageBackground: Colors.white.withOpacity(0.10000000149011612),
+            imageBackground: Colors.white.withValues(alpha:  0.10000000149011612),
             imageColor: Colors.white,
             image: itemModel.image,
           ),

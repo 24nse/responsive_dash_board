@@ -9,16 +9,16 @@ class LatestTransctionListView extends StatelessWidget {
   static const items = [
     UserInfoModel(
         image: Assets.imagesAvatar1,
-        title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail'),
+          title: 'Nooh Saeed',
+        subTitle: 'noohsaeed240@gmail'),
     UserInfoModel(
         image: Assets.imagesAvatar2,
-        title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail'),
+          title: 'Nooh Saeed',
+        subTitle: 'noohsaeed240@gmail'),
     UserInfoModel(
         image: Assets.imagesAvatar3,
-        title: 'Madrani Andi',
-        subTitle: 'Madraniadi20@gmail'),
+        title: 'Nooh Saeed',
+        subTitle: 'noohsaeed240@gmail'),
   ];
   @override
   Widget build(BuildContext context) {

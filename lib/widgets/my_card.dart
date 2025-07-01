@@ -11,6 +11,7 @@ class MyCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
+        margin: EdgeInsets.only(right: 4),
         decoration: ShapeDecoration(
           image: const DecorationImage(
               fit: BoxFit.fill, image: AssetImage(Assets.imagesCardBackground)),
@@ -30,7 +31,7 @@ class MyCard extends StatelessWidget {
                     color: Colors.white,
                   )),
               subtitle: Text(
-                'Syah Bandi',
+                'Nooh Saeed',
                 style: AppStyles.styleMedium20(context),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),

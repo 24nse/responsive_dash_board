@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
@@ -9,7 +8,6 @@ class TrasnctionHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log(MediaQuery.sizeOf(context).width.toString());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
