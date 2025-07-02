@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/range_options.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 
 class AllExpensessHeader extends StatelessWidget {
@@ -11,7 +12,7 @@ class AllExpensessHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
+        CustomText(
           'All Expenses',
           style: AppStyles.styleSemiBold20(context),
         ),

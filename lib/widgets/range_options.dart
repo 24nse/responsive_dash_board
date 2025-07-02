@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 class RangeOptions extends StatelessWidget {
   const RangeOptions({
@@ -19,7 +20,7 @@ class RangeOptions extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
+          CustomText(
             'Monthly',
             style: AppStyles.styleMedium16(context),
           ),

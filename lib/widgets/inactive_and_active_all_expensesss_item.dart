@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/all_expensess_item_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/all_expensess_item_header.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 
 class InActiveAllExpensessItem extends StatelessWidget {
@@ -34,7 +35,7 @@ class InActiveAllExpensessItem extends StatelessWidget {
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(
+            child: CustomText(
               itemModel.title,
               style: AppStyles.styleMedium16(context),
             ),
@@ -44,7 +45,7 @@ class InActiveAllExpensessItem extends StatelessWidget {
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(
+            child: CustomText(
               itemModel.date,
               style: AppStyles.styleRegular14(context),
             ),
@@ -54,7 +55,7 @@ class InActiveAllExpensessItem extends StatelessWidget {
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(
+            child: CustomText(
               itemModel.price,
               style: AppStyles.styleSemiBold24(context),
             ),
@@ -97,7 +98,7 @@ class ActiveAllExpensessItem extends StatelessWidget {
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(
+            child: CustomText(
               itemModel.title,
               style: AppStyles.styleMedium16(context).copyWith(
                 color: Colors.white,
@@ -109,7 +110,7 @@ class ActiveAllExpensessItem extends StatelessWidget {
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(
+            child: CustomText(
               itemModel.date,
               style: AppStyles.styleRegular14(context).copyWith(
                 color: const Color(0xFFFAFAFA),
@@ -121,7 +122,7 @@ class ActiveAllExpensessItem extends StatelessWidget {
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(
+            child: CustomText(
               itemModel.price,
               style: AppStyles.styleSemiBold24(context)
                   .copyWith(color: Colors.white),
