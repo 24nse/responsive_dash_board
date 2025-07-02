@@ -2,46 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/all_expensess_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widgets/all_expenssess_item.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
-class AllExpensessItemsListView extends StatefulWidget {
+class AllExpensessItemsListView extends HookWidget {
   const AllExpensessItemsListView({super.key});
 
   @override
-  State<AllExpensessItemsListView> createState() =>
-      _AllExpensessItemsListViewState();
-}
-
-class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
-  final items = [
-    const AllExpensessItemModel(
-        image: Assets.imagesBalance,
-        title: 'Balance',
-        date: 'April 2022',
-        price: r'$20,129'),
-    const AllExpensessItemModel(
-        image: Assets.imagesIncome,
-        title: 'Income',
-        date: 'April 2022',
-        price: r'$20,129'),
-    const AllExpensessItemModel(
-        image: Assets.imagesExpenses,
-        title: 'Expenses',
-        date: 'April 2022',
-        price: r'$20,129'),
-  ];
-
-  int selectedIndex = 0;
-  @override
   Widget build(BuildContext context) {
+    final items = [
+      const AllExpensessItemModel(
+          image: Assets.imagesBalance,
+          title: 'Balance',
+          date: 'April 2022',
+          price: r'$20,129'),
+      const AllExpensessItemModel(
+          image: Assets.imagesIncome,
+          title: 'Income',
+          date: 'April 2022',
+          price: r'$20,129'),
+      const AllExpensessItemModel(
+          image: Assets.imagesExpenses,
+          title: 'Expenses',
+          date: 'April 2022',
+          price: r'$20,129'),
+    ];
+    final selectedIndex = useState(0);
     return Row(
       children: [
         Expanded(
           child: GestureDetector(
             onTap: () {
-              updateIndex(0);
+              selectedIndex.value = 0;
             },
             child: AllExpensessItem(
-              isSelected: selectedIndex == 0,
+              isSelected: selectedIndex.value == 0,
               itemModel: items[0],
             ),
           ),
@@ -52,10 +46,10 @@ class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
         Expanded(
           child: GestureDetector(
             onTap: () {
-              updateIndex(1);
+              selectedIndex.value = 1;
             },
             child: AllExpensessItem(
-              isSelected: selectedIndex == 1,
+              isSelected: selectedIndex.value == 1,
               itemModel: items[1],
             ),
           ),
@@ -66,23 +60,16 @@ class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
         Expanded(
           child: GestureDetector(
             onTap: () {
-              updateIndex(2);
+              selectedIndex.value = 2;
             },
             child: AllExpensessItem(
-              isSelected: selectedIndex == 2,
+              isSelected: selectedIndex.value == 2,
               itemModel: items[2],
             ),
           ),
         )
       ],
     );
-   
-  }
-
-  void updateIndex(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
   }
 }
 
