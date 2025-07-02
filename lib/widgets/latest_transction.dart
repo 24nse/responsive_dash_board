@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/latest_transction_list_view.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 class LatestTransction extends StatelessWidget {
   const LatestTransction({super.key});
@@ -10,7 +11,7 @@ class LatestTransction extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        CustomText(
           'Latest Transaction',
           style: AppStyles.styleMedium16(context),
         ),

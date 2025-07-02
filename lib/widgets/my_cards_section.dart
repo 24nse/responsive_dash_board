@@ -3,6 +3,7 @@ import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/dots_indicator.dart';
 import 'package:responsive_dash_board/widgets/my_cards_page_view.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 
 class MyCardsSection extends HookWidget {
@@ -26,7 +27,7 @@ class MyCardsSection extends HookWidget {
       children: [
         SizedBox(
           width: 420,
-          child: Text(
+          child: CustomText(
             'My card',
             style: AppStyles.styleSemiBold20(context),
           ),

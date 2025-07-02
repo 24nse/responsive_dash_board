@@ -4,6 +4,7 @@ import 'package:responsive_dash_board/models/user_info_model.dart';
 
 
 import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile({
@@ -24,7 +25,7 @@ class UserInfoListTile extends StatelessWidget {
           title: FittedBox(
             fit: BoxFit.scaleDown,
             alignment: AlignmentDirectional.centerStart,
-            child: Text(
+            child: CustomText(
               userInfoModel.title,
               style: AppStyles.styleSemiBold16(context),
             ),
@@ -32,7 +33,7 @@ class UserInfoListTile extends StatelessWidget {
           subtitle: FittedBox(
             fit: BoxFit.scaleDown,
             alignment: AlignmentDirectional.centerStart,
-            child: Text(
+            child: CustomText(
               userInfoModel.subTitle,
               style: AppStyles.styleRegular12(context),
             ),

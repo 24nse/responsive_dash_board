@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/transction_history_list_view.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 class TrasnctionHistory extends StatelessWidget {
   const TrasnctionHistory({super.key});
@@ -16,7 +16,10 @@ class TrasnctionHistory extends StatelessWidget {
         FittedBox(
           alignment: AlignmentDirectional.centerStart,
           fit: BoxFit.scaleDown,
-          child: Text('13 April 2022', style: AppStyles.styleMedium16(context)),
+          child: CustomText(
+            '13 April 2022',
+            style: AppStyles.styleMedium16(context),
+          ),
         ),
         SizedBox(height: 16),
         TransctionHistoryListView(),
@@ -36,7 +39,7 @@ class TansctionHistoryHeader extends StatelessWidget {
         FittedBox(
           alignment: AlignmentDirectional.centerStart,
           fit: BoxFit.scaleDown,
-          child: Text(
+          child: CustomText(
             'Transaction History',
             style: AppStyles.styleSemiBold20(context),
           ),
@@ -44,7 +47,7 @@ class TansctionHistoryHeader extends StatelessWidget {
         FittedBox(
           alignment: AlignmentDirectional.centerStart,
           fit: BoxFit.scaleDown,
-          child: Text(
+          child: CustomText(
             'See all',
             style: AppStyles.styleMedium16(
               context,

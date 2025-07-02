@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/custom_text_field.dart';
+import 'package:responsive_dash_board/widgets/custom_text.dart';
 
 class TitleTextField extends StatelessWidget {
   const TitleTextField({super.key, required this.title, required this.hint});
@@ -11,7 +12,7 @@ class TitleTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        CustomText(
           'Customer name',
           style: AppStyles.styleMedium16(context),
         ),
