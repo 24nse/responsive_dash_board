@@ -12,7 +12,7 @@ class DotsIndicator extends StatelessWidget {
         3,
         (index) => Padding(
           padding: const EdgeInsets.only(right: 6),
-          child: CustomDotIndicator(isActive: index == currentPageIndex),
+          child:index == currentPageIndex ?const CustomDotIndicator(isActive: true) : const CustomDotIndicator(isActive: false),
         ),
       ),
     );

@@ -14,6 +14,7 @@ class MyCard extends StatelessWidget {
         margin: EdgeInsets.only(right: 4),
         decoration: ShapeDecoration(
           image: const DecorationImage(
+            
               fit: BoxFit.fill, image: AssetImage(Assets.imagesCardBackground)),
           color: const Color(0xFF4EB7F2),
           shape: RoundedRectangleBorder(
